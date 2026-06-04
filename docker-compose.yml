@@ -3,6 +3,7 @@ services:
     build: .
     ports:
       - "${APP_BIND:-127.0.0.1}:${APP_PORT:-7000}:7000"
+    gpus: all
     volumes:
       - ./data:/app/data:z
       - ./logs:/app/logs:z
